@@ -66,7 +66,7 @@
 
 4. [abcd] 表示可以匹配abcd中的任意一个字符。
 5. \[^ abcd\]表示可以匹配不是abcd中的任意-个字符。
-  当然上面的abcd你可以根据实际情况修改,以适应你的需求
+    当然上面的abcd你可以根据实际情况修改,以适应你的需求
 6. \ld表示可以匹配0-9的任意一个数字,相当于 [0-9]。
 7. \\\D表示可以四配不是0-9中的任意一个数字,相当于\[^0-9\]
 8. \\\w匹配任意英文字符、数字和下划线,相当于[a-zA-Z0-9 ]
@@ -108,4 +108,27 @@
 - 非捕获分组
 
 ![image-20230523222851200](img/image-20230523222851200.png)
+
+##  正则表达式三个常用类
+
+- Pattern类
+
+- Matcher类
+
+- PatternSyntaxException
+
+  是一个非强制异常类，它表示一个正则表达式模式中的语法错误
+
+### Matcher类
+
+```java
+public int start(); //返回以前匹配的初始索引
+public int start(int group); //返回在以前的匹配操作期间，由给定组所捕获的子序列的初始索引
+public int end(); //返回最后匹配字符之后的偏移量
+public int end(int group); //返回在以前的匹配操作期间，由给定组所捕获子序列的最后字符之后的偏移量
+public boolean lookingAt(); //尝试将从区域开头开始的输入序列与该模式匹配
+public boolean find(); //尝试查找与该模式匹配的输入序列的下一个子序列
+public boolean find(int start); //重置此匹配器，然后尝试查找匹配该模式、从指定索引开始的输入序列的下一个子序列
+public boolean matches(); //尝试将整个区域与模式匹配
+```
 
