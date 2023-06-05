@@ -162,3 +162,22 @@ public boolean matches(); //尝试将整个区域与模式匹配
 2. 要匹配五个连续的相同数字：(\\\d)\\\1{4}
 3. 要匹配个位与千位相同，十位与百位相同的数5225,1551：(\\\d)(\\\d)\\\2\\\1
 
+## String类中使用正则表达式
+
+- 替换功能
+
+  ```java
+  public String replaceAll(String regex, String replacement);
+  ```
+
+- 判断功能
+
+  ```java
+  public boolean matches(String regex)
+  ```
+
+- 分割功能
+
+  ```java
+  public String[] split(String regex)
+  ```
